@@ -1,64 +1,96 @@
+
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-/* body {font-family: Arial, Helvetica, sans-serif;} */
-
-
-</style>
-<link rel="stylesheet" href="css/formstyle.css" class="css">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Barlow&family=Patrick+Hand&display=swap" rel="stylesheet">
-
-
+  <title>LogIn</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/formstyle.css">
+    <link rel="stylesheet" href="css/styles.css">
 
 </head>
-<body>
-
-<h2>Modal Login Form</h2>
-
-<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
-
-<div id="id01" class="modal">
-  
-  <form class="modal-content animate" action="/action_page.php" method="post">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="img_avatar2.png" alt="Avatar" class="avatar">
-    </div>
-
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-        
-      <button type="submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
+<body class="bg-light">
+ <?php //include 'navbar.php' ?> 
+<div class="container p-5 ">
+  <div class="container-fluid p-5  shadow-lg border-0 rounded-lg mt-5">
+    <div class=" justify-content-center bg-light">
+    <h2 class="text-center">LOGIN</h2>
+    <div class="container-luid ">
+    <form action="#" method="POST" class="justify-content-center">
+     <div class="form-group">
+       <label for="email">Email:</label>
+       <input type="email" class="form-control" id="email" placeholder="Enter email" name="user">
+      </div>
+      <div class="form-group">
+       <label for="pwd">Password:</label>
+       <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pass">
+      </div>
+      <div class="form-group form-check">
+          <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" name="remember"> Remember me
       </label>
-    </div>
+      </div>
+      <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+    </form>
+   <br>
+    <h5>OR  <a href="signup.php">create account</a></h5>
 
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
-    </div>
-  </form>
+  </div>
 </div>
-
-<script>
-// Get the modal
-var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-</script>
-
+</div>
 </body>
+
 </html>
+
+
+<?php
+session_start();
+
+ $con=mysqli_connect('localhost','root','');
+ if ($con->connect_error) {
+     die("Connection failed: " . $conn->connect_error);
+   }
+  // echo "Connected successfully";
+ $db=mysqli_select_db($con,'artgallery1939');
+
+if(isset($_POST['submit']))
+{
+    $username = $_POST["user"];
+    $password = $_POST["pass"];
+        $sql="select username,password,name from customer where username = '$username' and password = '$password'";
+        $query = mysqli_query($con,$sql);
+        $row = mysqli_num_rows($query);
+        if($row == 1)
+        {
+           while($elem=mysqli_fetch_assoc($query)){
+               $dbusername=$elem['username'];
+               $dbpassword=$elem['password'];
+               $_SESSION['user_logged_in']='true';
+               $name=$elem['name'];
+               $_SESSION['uname']=$name;
+           }
+           if($username==$dbusername && $password==$dbpassword){
+               $_SESSION['user']=$username;
+             
+               header('location: index.php');
+               echo"login successful <a herf='index.html'>Click here<\a>";
+           }
+           else
+           {
+            echo"<script>alert('login failed')</script>";
+            header('location: login.php');
+           
+        }
+        
+        }
+ }
+
+
+
+
+?>
