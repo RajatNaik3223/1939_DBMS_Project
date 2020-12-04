@@ -8,10 +8,9 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css" class="css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Barlow&family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Patrick+Hand&display=swap" rel="stylesheet">
 
 
 </head>
@@ -30,64 +29,64 @@ include'navbar.php';?>
           <div class="row">
             <div class="col-lg-4  col-md-4 col-12 pb-4">
               <img src="images/img3.jpg" alt="image" class="img-fluid pb-3">
-              <!-- <h4 class="card-title">John Doe</h4>
+              <h4 class="card-title">John Doe</h4>
               <p class="card-text">Some example text.</p>
-              <a href="#" class="btn btn-primary">See Profile</a> -->
+              <a href="#" class="btn btn-primary">See Profile</a>
             </div>
             <div class="col-lg-4  col-md-4 col-12 pb-4">
               <img src="images/img3.jpg" alt="image" class="img-fluid pb-3">
-              <!-- <h4 class="card-title">John Doe</h4>
+              <h4 class="card-title">John Doe</h4>
               <p class="card-text">Some example text.</p>
-              <a href="#" class="btn btn-primary">See Profile</a> -->
+              <a href="#" class="btn btn-primary">See Profile</a>
     
             </div>
             <div class="col-lg-4  col-md-4 col-12 pb-4">
               <img src="images/img3.jpg" alt="image" class="img-fluid pb-3">
-              <!-- <h4 class="card-title">John Doe</h4>
+              <h4 class="card-title">John Doe</h4>
               <p class="card-text">Some example text.</p>
-              <a href="#" class="btn btn-primary">See Profile</a> -->
+              <a href="#" class="btn btn-primary">See Profile</a>
     
             </div>
             <div class="col-lg-4  col-md-4 col-12 pb-4">
               <img src="images/img3.jpg" alt="image" class="img-fluid pb-3">
-              <!-- <h4 class="card-title">John Doe</h4>
+              <h4 class="card-title">John Doe</h4>
               <p class="card-text">Some example text.</p>
-              <a href="#" class="btn btn-primary">See Profile</a> -->
+              <a href="#" class="btn btn-primary">See Profile</a>
     
             </div>
             <div class="col-lg-4  col-md-4 col-12 pb-4">
               <img src="images/img3.jpg" alt="image" class="img-fluid pb-3">
-              <!-- <h4 class="card-title">John Doe</h4>
+              <h4 class="card-title">John Doe</h4>
               <p class="card-text">Some example text.</p>
-              <a href="#" class="btn btn-primary">See Profile</a> -->
+              <a href="#" class="btn btn-primary">See Profile</a>
     
             </div>
             <div class="col-lg-4  col-md-4 col-12 pb-4">
               <img src="images/img3.jpg" alt="image" class="img-fluid pb-3">
-              <!-- <h4 class="card-title">John Doe</h4>
+              <h4 class="card-title">John Doe</h4>
               <p class="card-text">Some example text.</p>
-              <a href="#" class="btn btn-primary">See Profile</a> -->
+              <a href="#" class="btn btn-primary">See Profile</a>
     
             </div>
             <div class="col-lg-4  col-md-4 col-12 pb-4">
               <img src="images/img3.jpg" alt="image" class="img-fluid pb-3">
-              <!-- <h4 class="card-title">John Doe</h4>
+              <h4 class="card-title">John Doe</h4>
               <p class="card-text">Some example text.</p>
-              <a href="#" class="btn btn-primary">See Profile</a> -->
+              <a href="#" class="btn btn-primary">See Profile</a>
     
             </div>
             <div class="col-lg-4  col-md-4 col-12 pb-4">
               <img src="images/img3.jpg" alt="image" class="img-fluid pb-3">
-              <!-- <h4 class="card-title">John Doe</h4>
+              <h4 class="card-title">John Doe</h4>
               <p class="card-text">Some example text.</p>
-              <a href="#" class="btn btn-primary">See Profile</a> -->
+              <a href="#" class="btn btn-primary">See Profile</a>
     
             </div>
             <div class="col-lg-4  col-md-4 col-12 pb-4">
               <img src="images/img3.jpg" alt="image" class="img-fluid pb-3">
-              <!-- <h4 class="card-title">John Doe</h4>
+              <h4 class="card-title">John Doe</h4>
               <p class="card-text">Some example text.</p>
-              <a href="#" class="btn btn-primary">See Profile</a> -->
+              <a href="#" class="btn btn-primary">See Profile</a>
     
             </div>
             <!-- <div class="col-lg-4  col-md-4 col-12">
@@ -109,18 +108,7 @@ include'navbar.php';?>
 
 
 
-        <script>
-            /* Set the width of the side navigation to 250px */
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-}
-
-/* Set the width of the side navigation to 0 */
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
-        </script>
-
+       
 </body>
 </html>
 
